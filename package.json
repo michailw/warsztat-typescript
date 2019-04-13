@@ -1,0 +1,32 @@
+{
+  "name": "warsztat-typescript",
+  "version": "1.0.0",
+  "description": "Warsztat Typescript dla uczniów ZDZ",
+  "main": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michailw/warsztat-typescript.git"
+  },
+  "author": "Michal Wojtowicz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michailw/warsztat-typescript/issues"
+  },
+  "homepage": "https://github.com/michailw/warsztat-typescript#readme",
+  "devDependencies": {
+    "@types/express": "^4.16.1",
+    "@types/node": "^11.13.4",
+    "nodemon": "^1.18.11",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.4.3"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "scripts": {
+    "start": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
