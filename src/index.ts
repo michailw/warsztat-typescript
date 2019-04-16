@@ -3,6 +3,7 @@ import FactoryMethodUsage from "./factoryMethod/usage";
 import AbstractFactoryUsage from "./abstractFactory/usage";
 import AdapterUsage from "./adapter/usage";
 import ObserverUsage from "./observer/usage";
+import DIMethodUsage from "./dependencyInjection/usage"
 import Output from "./output";
 
 import express = require("express");
@@ -47,7 +48,7 @@ app.get("/abstractFactory", (req, res) => {
 });
 
 app.get("/dependencyInjection", (req, res) => {
-    FactoryMethodUsage()
+    DIMethodUsage()
     res.send(output.flush());
 });
 
