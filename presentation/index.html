@@ -280,6 +280,72 @@
 							<img src="https://refactoring.guru/images/patterns/diagrams/observer/structure-2x.png"/>
 						</section>
 					</section>
+
+					<section>
+						<section>
+							<h2>Fabryka</h2>
+						</section>
+
+						<section>
+							<h3>Fabryka</h3>
+
+							<img src="https://refactoring.guru/images/patterns/content/factory-method/factory-method-2x.png"/>
+						</section>
+					</section>
+
+					<section>
+						<section>
+							<h2>Dependency injection</h2>
+						</section>
+
+						<section>
+							<h3>Dependency injection</h3>
+
+							<ul>
+								<li class="fragment fade-up">moduły niskopoziomowe nie są zależne od wysokopoziomowych</li>
+								<li class="fragment fade-up">abstrakcja nie zależy od implementacji</li>
+								<li class="fragment fade-up">implementacja jest zależna od abstrakcji</li>
+							</ul>
+						</section>
+
+						<section>
+							<h3>Dependency injection</h3>
+
+							<pre><code>
+class StoreService
+{
+    public function getStoreCoordinates($store) {
+        $geolocationService = new GoogleMaps();
+
+        return $geolocationService
+            ->getCoordinatesFromAddress(
+                $store->getAddress()
+            );
+    }
+}
+</code></pre>
+						</section>
+						<section>
+							<h3>Dependency injection</h3>
+
+							<pre><code>
+class StoreService {
+    private $geolocationService;
+
+    public function __construct(GeolocationService $geolocationService) {
+        $this->geolocationService = $geolocationService;
+    }
+
+    public function getStoreCoordinates($store) {
+        return $this->geolocationService
+            ->getCoordinatesFromAddress(
+                $store->getAddress()
+            );
+    }
+}
+</code></pre>
+						</section>
+					</section>
 			</div>
 		</div>
 		
