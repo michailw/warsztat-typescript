@@ -5,7 +5,7 @@ export default function (){
     // var creator = new ConcreteCreator2();
 
     var product = creator.stworz();
-    // return product.getProductName();
+    // console.log(product.getProductName());
 
-    return creator.metodaKreatora();
+    console.log(creator.metodaKreatora());
 }
