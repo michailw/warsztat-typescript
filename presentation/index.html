@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+					<section>
+							<h3>Programowanie obiektowe i wzorce projektowe</h3>
+						</section>
+				
+				<section id="fragments">
+					<h2>Agenda</h2>
+					<p class="fragment">Programowanie obiektowe</p>
+					<p class="fragment">TypeScript</p>
+					<p class="fragment">Wzorce projektowe</p>
+				</section>
+				
+				<section>
+						<h2>Programowanie Obiektowe</h2>
+				</section>	
+
+				<section>
+					<h3>To proste:</h3>
+						<ul>
+								<li>Klasa</li>
+								<ul>
+									<li>pola</li>
+									<li>metody</li>
+								</ul>
+								<li>Obiekt</li>
+						</ul>
+				</section>	
+				
+				<section>
+					<H2>A PIE</H2>
+						<ul>
+								<li>Abstraction - Abstrakcja</li>
+								<li>Polimorphism - Polimorfizm</li>
+								<li>Inheritance - Dziedziczenie</li>
+								<li>Encapsulation - Hermetyzacja</li>
+						</ul>
+				</section>	
+
+				<section>
+						<h2>Hermetyzacja</h2>
+						<ul>
+							<li>Ukrywamy implementację</li>
+							<li>Tylko metody obiektu mogą zmieniać jego stan</li>
+							<li>Obiekt definiuje interfejsem dopuszczalne metody interakcji</li>
+						</ul>
+				</section>
+
+
+				<section>
+						<h2>Abstrakcja</h2>
+						<ul>
+							<li>Obiekt/Klasa reprezentuje wykonawcę</li>
+							<li>Obiekt/Klasa realizuje czynności bez konieczności ujawniania implementacji</li>
+						</ul>
+				</section>
+
+				<section>
+						<h2>Dziedziczenie</h2>
+						<ul>
+							<li>Umożliwia grupowanie obiektów według cech wspólnych</li>
+							<li>Klasy mogą wywodzić się z innych, bardziej ogólnych klas</li>
+							<li>Klasy dziedziczące z klas nadrzędnych dziedziczą ich metody</li>
+						</ul>
+				</section>
+
+				
+				<section>
+						<h2>Polimorfizm</h2>
+						<ul>
+							<li>Wiele (poly) form (morph)</li>
+							<li>W zależności od klasy, ta sama metoda może mieć inny efekt</li>
+						</ul>
+				</section>
+
+
+				<section>
+						<h2>SOLID - 5 zasad OOP</h2>
+						<li>Single Responsibility</li>
+						<li>Open-Closed</li>
+						<li>Liskov Substitution</li>
+						<li>Interface Segregation</li>
+						<li>Dependency Inversion</li>
+				</section>	
+
+				<section>
+						<h2>Single Responsibility</h2>
+						<ul>
+							<li>Zasada pojedynczej odpowiedzialności</li>
+							<li>Powinien istnieć tylko jeden powód do modyfikacji klasy</li>
+							<li>Klasa powinna odpowiadać za tylko jedną funkcjonalność</li>
+						</ul>
+				</section>
+
+				<section>
+						<h2>Open-Closed</h2>
+						<ul>
+							<li>Zasada otwarte-zamknięte</li>
+							<li>Klasa powinna być otwarta na rozszerzenie, ale zamknięta na modyfikacje</li>
+						</ul>
+				</section>
+
+				<section>
+						<h2>Liskov Substitution</h2>
+						<ul>
+							<li>Zasada podstawienia Liskov</li>
+							<li>Podklasa musi być zamienna z klasą nadrzędną</li>
+							<li>Kod działający poprawnie z klasą nadrzędną, powinien działać poprawnie z klasą dziedziczącą</li>
+						</ul>
+				</section>
+				
+				<section>
+						<h2>Interface Segregation</h2>
+						<ul>
+							<li>Interfejsy powinny byś rozdzielone</li>
+							<li>Klasa nie powinna musieć implementować rzeczy, których nie potrzebuje</li>
+							<li>Lepiej, gdy kod ma wiele mniejszych interfejsów, niż jeden wielki</li>
+						</ul>
+				</section>
+
+				<section>
+						<h2>Dependency Inversion</h2>
+						<ul>
+							<li>Wysokopoziomowe moduły nie powinny zależeć od modułów niskopoziomowych</li>
+							<li>Piszemy na abstrakcjach, nie na konkretnych implementacjach</li>
+						</ul>
+				</section>
+
+				<!--  -->
+
+				<section>
+					<img src="/img/ts.png"  height="400" width="400">
+				</section>
+
+			
+				<section>
+					<h3>TypeScript - historia</h3>
+					<ul>
+						<li>Zaprezentowany w 2012</li>
+						<li>Stworzony przez Microsoft</li>
+						<li>Open Source</li>
+					</ul>
+				</section>
+
+				<section>
+						<h3>TypeScript - nadzbiór javaScript</h3>
+						<ul>
+							<li>Umożliwia (opcjonalne) statyczne typowanie</li>
+							<li>Działa z kodem napisanym w czystym .js</li>
+							<li>Musi być kompilowany do postaci .js przy użyciu dostarczanego kompilatora</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Stackoverflow 2019 Developer Survey</h3>
+							<img src="/img/Popularity.png"  height="500" width="600">
+					</section>
+
+					<section>
+							<h2>Wzorce Projektowe</h2>
+							<ul>
+									<li>Singleton</li>
+									<li>Adapter</li>
+									<li>Obserwator</li>
+									<li>Fabryka</li>
+									<li>Dependency Injection</li>
+									<li>Budowniczy</li>
+							</ul>
+					</section>	
+
+					<section>
+						<h2>Czym jest wzorzec projektowy?</h2>
+
+					</section>
+
+					<section>
+						<ul>
+							<li>Design Patterns - banda czworga</li>
+							<li>Ogólny szablon - NIE dokładny algorytm!</li>
+							<li>Sprawdzone rozwiązanie częstego problemu projektowego</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Podział wzorców ze względu na rodzaje:</h3>
+						<ul>
+							<li>Konstrukcyjne - pomagają w abstrakcji procesu tworzenia klas i obiektów</li>
+							<li>Strukturalne - pomagają składać klasy i obiekty w większe lub inne struktury</li>
+							<li>Operacyjne - pomagają z podziałem zadań między klasami i obiektami</li>
+						</ul>
+					</section>
+
+
+			</div>
+		</div>
+		
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
