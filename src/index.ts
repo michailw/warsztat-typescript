@@ -1,5 +1,6 @@
 import SingletonUsage from "./singleton/usage";
-import FactoryMethodUsage from "./factory/FactoryMethodUsage";
+import FactoryMethodUsage from "./factoryMethod/usage";
+import AbstractFactoryUsage from "./abstractFactory/usage";
 import AdapterUsage from "./adapter/usage";
 import ObserverUsage from "./observer/usage";
 import Output from "./output";
@@ -41,7 +42,7 @@ app.get("/factoryMethod", (req, res) => {
 });
 
 app.get("/abstractFactory", (req, res) => {
-    FactoryMethodUsage()
+    AbstractFactoryUsage()
     res.send(output.flush());
 });
 
