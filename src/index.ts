@@ -13,7 +13,7 @@ app.get("/singleton", (req, res) => {
     res.send(SingletonUsage());
 });
 
-app.get("/factoryMethod/produkt1", (req, res) => {
+app.get("/factoryMethod", (req, res) => {
     res.send(FactoryMethodUsage());
 });
 
