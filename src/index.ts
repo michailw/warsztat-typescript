@@ -67,6 +67,16 @@ app.get("/czworokat", (req, res) => {
     res.send(output.flush());
 });
 
+import Kalkulator from "./math/Kalkulator";
+
+app.get("/kalkulator", (req, res) => {
+    const kalkulator = new Kalkulator();
+    // console.log(kalkulator.mnozenie(2, 3));
+    console.log(kalkulator.potega(2, 3));
+    console.log(kalkulator.potega(2, 0));
+
+    res.send(output.flush());
+});
 
 app.listen(80, () => {
     standardConsoleLog("Web server started listening on port 80");
